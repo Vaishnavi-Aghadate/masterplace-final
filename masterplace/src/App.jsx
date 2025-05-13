@@ -10,7 +10,7 @@ import ContactUs from './components/Contactus'
 import HomesList from './components/HomesList';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
-import Profile from './components/Profile';
+import Profile from './components/profile';
 import SavedProperties from './components/SavedProperties';
 
 
