@@ -102,11 +102,11 @@
 }
 
 .all-status {
-    background-color: gray;
+    background-color: rgb(219, 50, 50);
     color: white;
 }
 
-.for-rent {
+/* .for-rent {
     background-color: red;
     color: white;
 }
@@ -114,7 +114,7 @@
 .for-sell {
     background-color: darkred;
     color: white;
-}
+} */
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

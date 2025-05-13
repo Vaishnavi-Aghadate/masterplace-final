@@ -344,3 +344,211 @@
     font-size: 1rem;
   }
 }
+
+
+/* Enhanced FAQ Section Styles */
+.faq-section {
+  padding: 6rem 2rem;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* Decorative elements */
+.faq-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 20%);
+  z-index: 0;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-header h2 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #070707, #050915);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.faq-subtitle {
+  color: #64748b;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.faq-subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #2563eb, #1e40af);
+  border-radius: 3px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 
+              0 4px 6px -2px rgba(0, 0, 0, 0.025);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-left: 4px solid #2563eb;
+}
+
+.faq-toggle {
+  display: none;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: white;
+  position: relative;
+}
+
+.faq-question:hover {
+  color: #2563eb;
+}
+
+.faq-icon {
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  color: #2563eb;
+  min-width: 24px;
+  text-align: center;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 1.5rem;
+  color: #475569;
+  line-height: 1.7;
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.faq-toggle:checked + .faq-question {
+  color: #2563eb;
+  background-color: #f8fafc;
+}
+
+.faq-toggle:checked + .faq-question .faq-icon {
+  transform: rotate(45deg);
+  color: #1e40af;
+}
+
+.faq-toggle:checked ~ .faq-answer {
+  max-height: 500px;
+  padding: 1.5rem;
+}
+
+/* Add some decorative elements */
+.faq-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, transparent 100%);
+  border-bottom-left-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.faq-toggle:checked + .faq-question::after {
+  transform: scale(1.5);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 4rem 1rem;
+  }
+  
+  .faq-header h2 {
+    font-size: 2rem;
+  }
+  
+  .faq-question {
+    font-size: 1rem;
+    padding: 1.25rem;
+  }
+  
+  .faq-answer {
+    padding: 1rem;
+  }
+  
+  .faq-toggle:checked ~ .faq-answer {
+    padding: 1rem;
+  }
+}
+
+/* Animation for FAQ items */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-item {
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.faq-item:nth-child(1) { animation-delay: 0.1s; }
+.faq-item:nth-child(2) { animation-delay: 0.2s; }
+.faq-item:nth-child(3) { animation-delay: 0.3s; }
+.faq-item:nth-child(4) { animation-delay: 0.4s; }
+.faq-item:nth-child(5) { animation-delay: 0.5s; }

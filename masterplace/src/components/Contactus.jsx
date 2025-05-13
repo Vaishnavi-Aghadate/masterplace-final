@@ -392,6 +392,140 @@ export default function ContactUs() {
           </motion.div>
         </div>
       </motion.div>
+          {/* FAQ Section */}
+<motion.div
+  className="faq-section"
+  initial={{ opacity: 0, y: 50 }}
+  animate={mapInView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.8, delay: 0.2 }}
+>
+  <motion.div className="faq-header">
+    <motion.h2 
+      className="section-title"
+      initial={{ opacity: 0 }}
+      animate={mapInView ? { opacity: 1 } : {}}
+      transition={{ delay: 0.4 }}
+    >
+      Frequently Asked Questions
+    </motion.h2>
+    {/* <motion.p
+      className="faq-subtitle"
+      initial={{ opacity: 0 }}
+      animate={mapInView ? { opacity: 1 } : {}}
+      transition={{ delay: 0.6 }}
+    >
+      Find answers to common questions about our services
+    </motion.p> */}
+  </motion.div>
+
+  <motion.div className="faq-container">
+    {/* FAQ Item 1 */}
+    <motion.div 
+      className="faq-item"
+      initial={{ opacity: 0, y: 20 }}
+      animate={mapInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay: 0.8 }}
+      whileHover={{ scale: 1.02 }}
+    >
+      <input type="checkbox" id="faq1" className="faq-toggle" />
+      <label htmlFor="faq1" className="faq-question">
+        <span className="faq-icon">+</span>
+        What services do you offer in purchasing properties?
+      </label>
+      <div className="faq-answer">
+        <p>We offer comprehensive property purchasing services including property search and shortlisting, 
+        site visits, legal verification, price negotiation, home loan assistance, documentation support, 
+        and post-purchase services. Our team guides you through the entire buying process to ensure 
+        a smooth and secure transaction.</p>
+      </div>
+    </motion.div>
+
+    {/* FAQ Item 2 */}
+    <motion.div 
+      className="faq-item"
+      initial={{ opacity: 0, y: 20 }}
+      animate={mapInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay: 0.9 }}
+      whileHover={{ scale: 1.02 }}
+    >
+      <input type="checkbox" id="faq2" className="faq-toggle" />
+      <label htmlFor="faq2" className="faq-question">
+        <span className="faq-icon">+</span>
+        How can I list my property on your website?
+      </label>
+      <div className="faq-answer">
+        <p>Listing your property is simple! You can either call us at +91 9970017701, 
+        email us at info@masterplace.in, or fill out our online property submission form. 
+        We'll schedule a visit to assess your property, take professional photographs, 
+        and create an attractive listing with detailed information to maximize visibility.</p>
+      </div>
+    </motion.div>
+
+    {/* FAQ Item 3 */}
+    <motion.div 
+      className="faq-item"
+      initial={{ opacity: 0, y: 20 }}
+      animate={mapInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay: 1.0 }}
+      whileHover={{ scale: 1.02 }}
+    >
+      <input type="checkbox" id="faq3" className="faq-toggle" />
+      <label htmlFor="faq3" className="faq-question">
+        <span className="faq-icon">+</span>
+        Do you offer property management services?
+      </label>
+      <div className="faq-answer">
+        <p>Yes, we provide complete property management services including tenant screening, 
+        rent collection, maintenance coordination, regular property inspections, and financial reporting. 
+        Our property management services are designed to maximize your returns while minimizing 
+        the hassles of property ownership.</p>
+      </div>
+    </motion.div>
+
+    {/* FAQ Item 4 */}
+    <motion.div 
+      className="faq-item"
+      initial={{ opacity: 0, y: 20 }}
+      animate={mapInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay: 1.1 }}
+      whileHover={{ scale: 1.02 }}
+    >
+      <input type="checkbox" id="faq4" className="faq-toggle" />
+      <label htmlFor="faq4" className="faq-question">
+        <span className="faq-icon">+</span>
+        What are the advantages of purchasing a property?
+      </label>
+      <div className="faq-answer">
+        <p>Property ownership offers numerous benefits including long-term wealth creation, 
+        stable monthly rental income, capital appreciation, tax benefits, and a hedge against inflation. 
+        Unlike other investments, real estate provides tangible assets that can be leveraged for future 
+        financial needs while serving as a secure place to live or work.</p>
+      </div>
+    </motion.div>
+
+    {/* FAQ Item 5 */}
+    <motion.div 
+      className="faq-item"
+      initial={{ opacity: 0, y: 20 }}
+      animate={mapInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay: 1.2 }}
+      whileHover={{ scale: 1.02 }}
+    >
+      <input type="checkbox" id="faq5" className="faq-toggle" />
+      <label htmlFor="faq5" className="faq-question">
+        <span className="faq-icon">+</span>
+        Can I arrange a virtual tour for a property I'm interested in?
+      </label>
+      <div className="faq-answer">
+        <p>Absolutely! We offer high-quality virtual tours for all our listed properties. 
+        You can request a virtual tour by contacting our team, and we'll schedule a live video walkthrough 
+        with one of our agents or provide you with a pre-recorded 3D tour. This allows you to explore 
+        properties remotely at your convenience.</p>
+      </div>
+    </motion.div>
+  </motion.div>
+</motion.div>
+
     </div>
   );
   
