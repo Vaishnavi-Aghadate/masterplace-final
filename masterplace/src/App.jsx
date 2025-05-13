@@ -10,8 +10,8 @@ import ContactUs from './components/Contactus'
 import HomesList from './components/HomesList';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
-import Profile from './components/profile';
 import SavedProperties from './components/SavedProperties';
+import Profile from './components/Profile';
 
 
 
@@ -35,17 +35,13 @@ function App() {
       <Route path='/contact' element={ <ContactUs/>}/>
       <Route path='/homeslist' element={<HomesList/>}/>
       <Route path='/adminPanel' element={<AdminPanel/>}/>
-      <Route path='/profile'element={<Profile/>}/>
+      <Route path='/profile' element={<Profile/>}/>
       <Route path='/SavedProperties'element={<SavedProperties/>}/>
 
-     
      
       </Routes>
       <Footer/>
       
-      
-      
-    
    
     </div>
 
